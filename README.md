@@ -1,40 +1,11 @@
 # PHP Session Middleware
 
-[![Build Status](https://travis-ci.org/inxilpro/php-session-middleware.svg)](https://travis-ci.org/inxilpro/php-session-middleware) [![Dependency Status](https://david-dm.org/inxilpro/php-session-middleware.svg)](https://david-dm.org/inxilpro/php-session-middleware)
+[![Build Status](https://travis-ci.org/emilioplatzer/php-session-middleware.svg)](https://travis-ci.org/emilioplatzer/php-session-middleware) [![Dependency Status](https://david-dm.org/emilioplatzer/php-session-middleware.svg)](https://david-dm.org/emilioplatzer/php-session-middleware)
 
-This is simple Express/Connect middleware that loads PHP sessions in
-an express request.
+This is a for of https://github.com/inxilpro/php-session-middleware
 
-## Installation
+It's a temporary fork. 
 
-``` bash
-$ npm install php-session-middleware --save
-```
+# Improvement
 
-## Usage
-
-``` js
-app.use(require('php-session-middleware')({
-	handler: 'file',
-	opts: {
-		path: '/tmp/'
-	}
-}));
-app.get('/restricted', function(req, res) {
-	if (req.session) {
-		res.render('hello', { 
-			name: req.session.name
-		});
-	}
-});
-```
-
-## Roadmap
-  - Optionally parse `php.ini` for configuration
-  - Allow for other session handlers, such as memcached
-  - More tests
-
-## Change Log
-
-### Initial release
-  - This is the initial release, with minimal testing.  Use at your own risk.
+In this fork you can change the name of the PHP session property (in the case you need to coexist with other session like express-sesion).
