@@ -31,6 +31,6 @@ describe('PHP session middleware with other session name', function(){
 	it('should emit an error', function(done) {
 		supertest(app)
 			.get('/?PHPSESSID=' + sid)
-			.expect(200, 'ERROR "ENOENT, open"', done);
+			.expect(200, /ERROR "ENOENT.*"/, done);
 	});
 })
