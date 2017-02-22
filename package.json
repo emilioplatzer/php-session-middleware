@@ -1,6 +1,6 @@
 {
   "name": "php-session",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Express/Connect Middleware to load PHP session data",
   "main": "index.js",
   "scripts": {
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "mocha": "^3.2.0",
-    "express": "^4.14.0",
-    "supertest": "^2.0.1",
+    "express": "^4.14.1",
+    "supertest": "^3.0.0",
     "cookie-parser": "^1.4.3",
     "istanbul": "^0.4.5"
   }
